@@ -1,0 +1,23 @@
+# Ignorar arquivos de estado do Terraform
+*.tfstate
+*.tfstate.*
+*.out
+
+# Arquivos de crash e logs
+*.log
+*.tfplan
+.crash
+
+# Diretório oculto do Terraform
+.terraform/
+
+# Arquivos sensíveis com variáveis
+*.tfvars
+
+# Lock file (pode versionar se quiser, mas muitos preferem ignorar)
+.terraform.lock.hcl
+
+# Diretórios e arquivos de IDEs
+.vscode/
+.idea/
+*.bak

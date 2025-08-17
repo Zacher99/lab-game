@@ -80,7 +80,7 @@
       function enviarPalpite() {
         var palpite = document.getElementById("palpite").value;
         var url =
-          "<Invocar URL>/<Caminho do recurso>?palpite=" +
+          "${api_url}?palpite=" +
           palpite;
 
         fetch(url)

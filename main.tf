@@ -1,4 +1,5 @@
 terraform {
+  required_version = "> 1.11"
   required_providers {
     aws = {
       source  = "hashicorp/aws"
@@ -11,7 +12,8 @@ provider "aws" {
   region = var.region
   default_tags {
     tags = {
-      labgame = "MatheusZacher"
+      labgame   = "MatheusZacher"
+      ManagedBy = "Terraform"
     }
   }
 }
