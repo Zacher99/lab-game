@@ -1,11 +1,12 @@
 # ☁️🎮 Jogo de Adivinhação na Nuvem 
 
-Este projeto é um **lab prático** desenvolvido para exercitar conceitos de **arquitetura em nuvem** utilizando:
+Este projeto é um **lab prático** desenvolvido para exercitar conceitos de **arquitetura em nuvem** 
+A solução foi 100% provisionada com **Terraform**, utilizando os seguintes serviços AWS:
 
 - **AWS Lambda**
 - **API Gateway**
 - **Amazon S3 (Frontend)**
-- **Terraform** para provisionamento da infraestrutura
+- **Terraform**
 
 ---
 
@@ -91,15 +92,6 @@ terraform apply
 5. **Acessar o frontend**  
    - Após o deploy, o Terraform exibirá a URL do **S3 Static Website Hosting**.  
    - Abra a URL no navegador e jogue! 🎉  
-
----
-
-## 💡 Tecnologias Utilizadas
-
-- **AWS Lambda**
-- **Amazon API Gateway**
-- **Amazon S3**
-- **Terraform**
 
 ---
 
