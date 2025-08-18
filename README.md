@@ -1,6 +1,6 @@
 # ☁️🎮 Jogo de Adivinhação na Nuvem 
 
-Este projeto é um **lab prático** desenvolvido para exercitar conceitos de **arquitetura em nuvem** 
+Este projeto é um **lab prático** desenvolvido para exercitar conceitos de **arquitetura em nuvem.** 
 A solução foi 100% provisionada com **Terraform**, utilizando os seguintes serviços AWS:
 
 - **AWS Lambda**
