@@ -76,7 +76,11 @@
       border-radius: 8px;
       padding: 8px;
       width: 25%;
+    }
 
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
     }
 
     .btn {
@@ -121,7 +125,7 @@
       <div class="title">Jogo de Adivinhação</div>
       <div class="hint">Pensei em um número de 1 a 10.<br>Tente adivinhar!</div>
 
-      <input type="number" id="palpite" min="1" max="10" placeholder=" ?" />
+      <input type="number" id="palpite" min="1" max="10" placeholder="?" />
       <br>
       <button class="btn" onclick="enviarPalpite()">Jogar</button>
 
