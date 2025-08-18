@@ -57,6 +57,7 @@ A arquitetura provisionada com **Terraform** é composta por:
 ├── lambda.tf                # Configuração da função Lambda
 ├── locals.tf                # variável utilizada dentro do template
 ├── main.tf                  # Definição principal do Terraform
+├── outputs.tf               # outputs onde exibe o endpoint do s3
 ├── s3-bucket.tf             # Configuração do bucket S3       
 ├── s3-object.tf             # Configuração do objetos no bucket
 └── README.md                # Este arquivo
