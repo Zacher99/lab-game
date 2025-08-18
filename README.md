@@ -1,4 +1,4 @@
-# Jogo de Adivinhação na Nuvem ☁️🎮
+# ☁️🎮 Jogo de Adivinhação na Nuvem 
 
 Este projeto é um **lab prático** desenvolvido para exercitar conceitos de **arquitetura em nuvem** utilizando:
 
@@ -40,7 +40,7 @@ A arquitetura provisionada com **Terraform** é composta por:
 3. **Infraestrutura como Código**  
    - Todo o ambiente é criado utilizando **Terraform**, garantindo reprodutibilidade e versionamento da infraestrutura.  
 
-## 🎮 Jogo de Adivinhação na Nuvem
+## 🎮 Preview do Jogo de Adivinhação
 
 ![Preview do site](./img/preview.png)
 ---
