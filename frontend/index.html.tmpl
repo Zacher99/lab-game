@@ -1,99 +1,162 @@
-<html lang="pt">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jogo de Adivinhação</title>
-    <style>
-      body {
-        font-family: 'Arial', sans-serif;
-        background: linear-gradient(to right, #4facfe, #00f2fe);
-        margin: 0;
-        padding: 0;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      .container {
-        text-align: center;
-        background: rgba(0, 0, 0, 0.7);
-        border-radius: 10px;
-        padding: 40px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-        color: #fff;
-        width: 100%;
-        max-width: 400px;
-      }
-      h2 {
-        font-size: 2em;
-        margin-bottom: 20px;
-        color: #ffdd57;
-      }
-      input[type="number"] {
-        padding: 10px;
-        font-size: 1.2em;
-        width: 80%;
-        margin-bottom: 20px;
-        border: none;
-        border-radius: 5px;
-        text-align: center;
-      }
-      button {
-        background-color: #ff6f61;
-        color: white;
-        padding: 15px 30px;
-        font-size: 1.2em;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-      }
-      button:hover {
-        background-color: #ff8c7b;
-      }
-      #resultado {
-        margin-top: 20px;
-        font-size: 1.5em;
-        font-weight: bold;
-        color: #ffdd57;
-      }
-      footer {
-        margin-top: 30px;
-        font-size: 0.9em;
-        color: #ddd;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <h2>Jogo de Adivinhação</h2>
-      <p>Eu pensei em um número de 1 a 10. Tente adivinhar!</p>
-      <input type="number" id="palpite" min="1" max="10" />
-      <button onclick="enviarPalpite()">Enviar</button>
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Jogo de Adivinhação — Retro</title>
+
+  <!-- Fonte pixelada -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #141d2b;
+      /* azul escuro base */
+      --bg-mid: #141d2b;
+      /* azul intermediário */
+      --bg-light: #202837;
+      /* azul claro */
+      --accent-orange: #9fef00;
+      /* destaque principal */
+      --accent-yellow: #9fef00;
+      /* detalhe secundário */
+      --screen-text: #fff;
+      /* texto dentro da tela */
+    }
+
+
+    html {
+      margin: 0;
+      height: 100%;
+      font-family: "Inter", sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #0B121F;
+
+    }
+
+    .console {
+      width: 420px;
+      max-width: 90vw;
+      background: var(--bg-mid);
+      border: 2px solid #202837;
+      border-radius: 8px;
+      padding: 18px;
+    }
+
+    .screen {
+      padding: 20px;
+      min-height: 220px;
+      text-align: center;
+      color: var(--screen-text);
+    }
+
+    .title {
+      color: var(--accent-orange);
+      font-size: 28px;
+      margin-bottom: 12px;
+    }
+
+    .hint {
+      font-size: 16px;
+      margin-bottom: 16px;
+      line-height: 2;
+    }
+
+    input[type="number"] {
+      font-family: 'Press Start 2P', cursive;
+      font-size: 12px;
+      margin-bottom: 6px;
+      text-align: center;
+      border: 0px solid var(--bg-light);
+      border-radius: 8px;
+      padding: 8px;
+      width: 25%;
+
+    }
+
+    .btn {
+      margin-top: 12px;
+      display: inline-block;
+      font-size: 15px;
+      font-weight: 800;
+      padding: 10px 18px;
+      background: var(--accent-orange);
+      color: #121c2b;
+      border: 0px solid #222;
+      border-radius: 8px;
+
+      cursor: pointer;
+      transition: transform .1s ease;
+    }
+
+    .btn:active {
+      transform: translateY(3px);
+
+    }
+
+    #resultado {
+      margin-top: 16px;
+      font-size: 16px;
+      color: var(--accent-yellow);
+      line-height: 2;
+    }
+
+    footer {
+      margin-top: 16px;
+      font-size: 12px;
+      color: var(--screen-text);
+      opacity: 0.85;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="console">
+    <div class="screen">
+      <div class="title">Jogo de Adivinhação</div>
+      <div class="hint">Pensei em um número de 1 a 10.<br>Tente adivinhar!</div>
+
+      <input type="number" id="palpite" min="1" max="10" placeholder=" ?" />
+      <br>
+      <button class="btn" onclick="enviarPalpite()">Jogar</button>
+
       <div id="resultado"></div>
-      <footer>
-        <p>Escola da Nuvem💙</p>
-      </footer>
+
+      <footer>Escola da Nuvem 💙 — Matheus Zacher</footer>
     </div>
+  </div>
 
-    <script>
-      function enviarPalpite() {
-        var palpite = document.getElementById("palpite").value;
-        var url =
-          "${api_url}?palpite=" +
-          palpite;
+  <script>
+    function enviarPalpite() {
+      var palpite = document.getElementById("palpite").value;
+      var resultadoEl = document.getElementById("resultado");
 
-        fetch(url)
-          .then((response) => response.json())
-          .then((data) => {
-            document.getElementById("resultado").innerText =
-              "Resultado: " + data.resultado;
-          })
-          .catch((error) => {
-            document.getElementById("resultado").innerText =
-              "Erro ao comunicar com a API.";
-          });
+      if (!palpite || isNaN(palpite) || palpite < 1 || palpite > 10) {
+        resultadoEl.innerText = "Insira um número válido entre 1 e 10.";
+        return;
       }
-    </script>
-  </body>
+
+      resultadoEl.innerText = "Verificando...";
+
+      var url =
+        "${api_url}?palpite=" +
+        palpite;
+
+      fetch(url)
+        .then((response) => response.json())
+        .then((data) => {
+          resultadoEl.innerText = "Resultado: " + data.resultado;
+        })
+        .catch(() => {
+          resultadoEl.innerText = "Erro ao comunicar com a API.";
+        });
+    }
+  </script>
+</body>
+
 </html>
