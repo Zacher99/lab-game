@@ -40,6 +40,9 @@ A arquitetura provisionada com **Terraform** é composta por:
 3. **Infraestrutura como Código**  
    - Todo o ambiente é criado utilizando **Terraform**, garantindo reprodutibilidade e versionamento da infraestrutura.  
 
+## 🎮 Jogo de Adivinhação na Nuvem
+
+![Preview do site](./img/preview.png)
 ---
 
 ## 📂 Estrutura do Projeto
